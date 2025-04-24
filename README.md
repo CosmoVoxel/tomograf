@@ -6,6 +6,9 @@ This little app is a basic simulator for how a CT (Computed Tomography) scanner 
 
 It creates **sinogram** (which is like the raw data the scanner gets) and then tries to **reconstruct** the original image back from that sinogram.
 
+## GUI - *streamlit*
+![Screenshot 2025-04-25 003354](https://github.com/user-attachments/assets/50427842-102e-4031-b1fb-14cc9730c997)
+
 **IMPORTANT NOTE!**
 - No filters are applied after Inverse Radon Transformation
 
@@ -45,9 +48,6 @@ It creates **sinogram** (which is like the raw data the scanner gets) and then t
     1.  Click `Create Sinogram` first. This generates the projection data from your image based on the parameters you set.
     2.  Once the sinogram is ready, click `Reconstruct Image`. This uses the sinogram data to build the final image.
 *   **Download**: If the reconstruction looks okay you'll see a `Save as DICOM` button appear below it. Click that to save your result.
-
-## GUI - *streamlit*
-![Screenshot 2025-04-25 003354](https://github.com/user-attachments/assets/50427842-102e-4031-b1fb-14cc9730c997)
 
 
 ## Cool Stuff It Does
