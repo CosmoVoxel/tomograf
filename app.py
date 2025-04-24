@@ -203,12 +203,6 @@ def create_sinogram(
 
 """
 Standard Backprojection (Nearest Neighbor) Implementation.
-For each angle:
-    - Get the corresponding projection line from the sinogram.
-    - For each pixel in the output image:
-        - Calculate its projection onto the detector line.
-        - Find the nearest detector index.
-        - Add the value from the sinogram at that detector index to the pixel.
 """
 def backproject(
     sinogram,
@@ -257,17 +251,12 @@ def backproject(
 
         valid_mask = (j_nearest >= 0) & (j_nearest < num_detectors)
 
-        # Initialize the contribution from this projection angle
         projection_contribution = np.zeros(output_shape, dtype=float)
 
-        # Get the sinogram values corresponding to the nearest valid detector indices
-        # np.take efficiently gathers elements using the indices
         sinogram_values = np.take(sinogram[i, :], j_nearest[valid_mask])
 
-        # Add these sinogram values to the corresponding pixels in the projection contribution map
         projection_contribution[valid_mask] = sinogram_values
 
-        # Add (backproject) the contribution of this angle to the reconstructed image
         reconstructed += projection_contribution
 
     return reconstructed
