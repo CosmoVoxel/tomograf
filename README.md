@@ -47,6 +47,7 @@ It creates **sinogram** (which is like the raw data the scanner gets) and then t
 *   **Download**: If the reconstruction looks okay you'll see a `Save as DICOM` button appear below it. Click that to save your result.
 
 ## GUI - *streamlit*
+![Screenshot 2025-04-25 003354](https://github.com/user-attachments/assets/50427842-102e-4031-b1fb-14cc9730c997)
 
 
 ## Cool Stuff It Does
