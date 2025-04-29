@@ -7,7 +7,6 @@ This little app is a basic simulator for how a CT (Computed Tomography) scanner 
 It creates **sinogram** (which is like the raw data the scanner gets) and then tries to **reconstruct** the original image back from that sinogram.
 
 ## GUI - *streamlit*
-![image 1](https://github.com/user-attachments/assets/1bd380f1-367e-40e3-9858-a7ec40d5724c)
 ![image 2](https://github.com/user-attachments/assets/ad25dea1-6637-4c31-ab2d-ec0e5b1c3cee)
 
 
